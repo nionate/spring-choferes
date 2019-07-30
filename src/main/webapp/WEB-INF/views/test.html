@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+Lista de choferes
+
+<div th:unless="${#lists.isEmpty(choferes)}">
+    <table>
+        <thead>
+        <tr>
+            <th>Rut</th>
+            <th>Razon</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="chofer : ${choferes}">
+            <td th:text="${{chofer.Rut}}">empty</td>
+            <td th:text="${{chofer.Razon}}">empty</td>
+            <td><button >Enviar</button></td>
+            <td><button>Eliminar</button></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
